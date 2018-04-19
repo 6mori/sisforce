@@ -6,16 +6,13 @@ from .. import constants as c
 
 class Character(Sprite):
 
-    def __init__(self,screen):
+    def __init__(self):
         super().__init__()
 
-        self.screen=screen
-
-        self.image = pg.transform.scale(pg.image.load('images/dnf_s.png'),c.CHARACTER_SIZE)
+        self.image = pg.transform.scale(pg.image.load('images/m_shoter/stand/dnf_s.png'),c.CHARACTER_SIZE)
         self.image_right = self.image
         self.image_left = pg.transform.flip(self.image_right, True, False)
         self.rect = self.image.get_rect()
-
 
         self.state = c.STAND
 
@@ -98,7 +95,7 @@ class Character(Sprite):
         self.check_to_allow_action()
         self.check_to_allow_skill()
 
-        self.image_right = pg.transform.scale(pg.image.load('images/dnf_s.png'), c.CHARACTER_SIZE)
+        self.image_right = pg.transform.scale(pg.image.load('images\m_shoter\stand\dnf_s.png'), c.CHARACTER_SIZE)
         self.image_left = pg.transform.flip(self.image_right, True, False)
 
         self.x_vel = 0
@@ -135,7 +132,7 @@ class Character(Sprite):
         self.check_to_allow_skill()
 
         #加载贴图
-        image_address='images/dnf_w_%d.png'%(self.walk_counter//c.CHARACTER_MOVING_SPEED)
+        image_address='images\m_shoter\walk\dnf_w_%d.png'%(self.walk_counter//c.CHARACTER_MOVING_SPEED)
         self.walk_counter+=1
         self.walk_counter%=4*c.CHARACTER_MOVING_SPEED
         self.image_right= pg.transform.scale(pg.image.load(image_address),c.CHARACTER_SIZE)
@@ -253,6 +250,7 @@ class Character(Sprite):
 
 
     def blitme(self):
-        self.screen.blit( self.image, self.rect )
+    #    self.screen.blit( self.image, self.rect )
+        pass
 
     # for test

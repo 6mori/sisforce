@@ -29,7 +29,7 @@ BGCOLOR = WHITE
 
 # Game states
 
-MAIN_MENU = 'main menu'
+MENU      = 'menu'
 LOADING   = 'loading'
 GAMING    = 'gaming'
 GAME_OVER = 'game over'
@@ -45,7 +45,7 @@ SKILL = 'skill'
 
 # Character property
 
-MAX_X_VEL    = 2
+MAX_X_VEL    = 3
 MAX_Y_VEL    = 11
 JUMP_VEL     = -2.1
 GRAVITY      = 0.05
@@ -69,13 +69,22 @@ BRICK_DUR    = 5
 # Bullet property
 
 BULLET_VEL    = 2
+BULLET_WIDTH  = 50
+BULLET_HEIGHT = 10
 BULLET_SIZE = (50,10)
+
+# Sword property
+
+SWORD_DAMAGE    = 2
+SWORD_WIDTH     = 25
+SWORD_HEIGHT    = 20
+SWORD_LAST_TIME = 0.5
 
 # For test
 BG_COLOR = GRAY
 
 #Character speeds(higher = slower)
-CHARACTER_MOVING_SPEED = 40
+CHARACTER_MOVING_SPEED = 20
 CHARACTER_SKILL_SPEED = 15
 
 #Character size

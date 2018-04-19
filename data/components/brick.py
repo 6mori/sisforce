@@ -12,7 +12,7 @@ class Brick(Sprite):
         #self.image = pygame.image.load('images/')
         #self.rect = self.image.get_rect()
 
-        self.dur = c.BRICK_DUR
+        self.HP = c.BRICK_DUR
 
         # for test
         self.color = c.ORANGE
